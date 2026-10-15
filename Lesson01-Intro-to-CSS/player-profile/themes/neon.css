@@ -1,0 +1,71 @@
+/* =========================================================
+   NEON ESPORTS THEME  ·  ready-made skin for Lesson 1
+   You don't need to understand every line yet.
+   By the end of Unit 2, you will.
+   ========================================================= */
+
+body {
+    background-color: #05070d;          /* almost black */
+    color: #dce6f5;
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 24px;
+}
+
+header {
+    border-bottom: 2px solid #00e5ff;   /* cyan underline */
+    padding-bottom: 12px;
+}
+
+h1 {
+    color: #00e5ff;
+    font-size: 44px;
+    font-style: italic;
+    margin: 0;
+    text-shadow: 0 0 12px #00e5ff;      /* the glow */
+}
+
+h2 {
+    color: #ff3df2;                     /* magenta */
+    font-style: italic;
+}
+
+.tagline {
+    color: #8fa3bf;
+    margin: 4px 0 0;
+}
+
+.player-card {
+    background-color: #0d1424;
+    border: 1px solid #ff3df2;
+    border-radius: 10px;
+    padding: 4px 20px 20px;
+    margin-top: 20px;
+}
+
+.tag {
+    border: 1px solid #00e5ff;
+    color: #00e5ff;
+    border-radius: 999px;
+    padding: 2px 10px;
+}
+
+.stat {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.btn {
+    display: inline-block;
+    border: 2px solid #ff3df2;
+    color: #ff3df2;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    color: #8fa3bf;
+    margin-top: 24px;
+}

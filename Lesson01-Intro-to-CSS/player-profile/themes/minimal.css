@@ -1,0 +1,63 @@
+/* =========================================================
+   MINIMAL THEME  ·  ready-made skin for Lesson 1
+   You don't need to understand every line yet.
+   By the end of Unit 2, you will.
+   ========================================================= */
+
+body {
+    background-color: #fbfaf7;          /* warm paper */
+    color: #222222;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 24px;
+}
+
+header {
+    border-bottom: 1px solid #222222;
+    padding-bottom: 8px;
+}
+
+h1 {
+    font-size: 42px;
+    font-weight: normal;
+    margin: 0;
+}
+
+h2 {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6b6b6b;
+}
+
+.tagline {
+    color: #6b6b6b;
+    font-style: italic;
+    margin: 0;
+}
+
+.player-card {
+    margin-top: 16px;
+}
+
+.tag {
+    border-bottom: 2px solid #c0392b;   /* one red accent */
+}
+
+.stat {
+    font-weight: bold;
+}
+
+.btn {
+    color: #c0392b;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+footer {
+    color: #6b6b6b;
+    font-size: 14px;
+    margin-top: 24px;
+}
