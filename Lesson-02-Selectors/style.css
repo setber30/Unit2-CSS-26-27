@@ -1,0 +1,22 @@
+h1, h2 {
+    font-family: 'Courier New', Courier, monospace;
+}
+.player-card p {
+    color: #f2b705;
+}
+.player-card a {
+    background-color: yellow;
+}
+#banner {
+    border: 3px solid #5ADB8C;
+    padding-left: 3px;
+}
+.about p {
+    font-style: italic;
+}
+footer p {
+    color: #AEC0D8;
+}
+.player-card p {
+    font-weight: bold;
+}
