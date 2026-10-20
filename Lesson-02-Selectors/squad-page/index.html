@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Nova</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Team Nova</h1>
+        <p class="tagline">Season 7 &middot; Division 2</p>
+        <nav>
+            <a href="#roster" class="active">Roster</a>  <!-- the section you are on -->
+            <a href="#matches">Matches</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- id="roster": one-of-a-kind, so the nav link can jump here -->
+        <section id="roster">
+            <h2>Roster</h2>
+
+            <!-- three cards share a CLASS... -->
+            <article class="player-card" id="captain">  <!-- ...only one has this ID -->
+                <h3>NovaBlade</h3>
+                <p>Role: <span class="tag">Captain</span></p>
+                <p>Win rate: <span class="stat">61%</span></p>
+            </article>
+
+            <article class="player-card">
+                <h3>PixelFox</h3>
+                <p>Role: <span class="tag">Support</span></p>
+                <p>Win rate: <span class="stat">57%</span></p>
+            </article>
+
+            <article class="player-card">
+                <h3>Byte</h3>
+                <p>Role: <span class="tag">Rookie</span></p>
+                <p>Win rate: <span class="stat">49%</span></p>
+            </article>
+        </section>
+
+        <section id="matches">
+            <h2>Recent Matches</h2>
+            <p>Last three games, newest first.</p>
+            <ul class="results">
+                <li>Win vs Iron Owls</li>
+                <li>Loss vs Static</li>
+                <li>Win vs Red Comets</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Team Nova</p>
+    </footer>
+
+</body>
+</html>

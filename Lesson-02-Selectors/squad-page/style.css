@@ -1,0 +1,37 @@
+/* style.css · squad page (after Lesson 2A) */
+
+body {
+    background-color: #101A2B;
+    color: #EAF0F7;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: #5ADB8C;
+    font-size: 40px;
+}
+
+.tag {
+    background-color: #2B3F5F;
+    color: #5ADB8C;
+}
+
+/* only the captain: # = id */
+#captain {
+    border: 2px solid #F2B705;
+}
+
+/* comma = "and": one rule, two selectors */
+h2, h3 {
+    color: #F2B705;
+}
+
+/* space = "inside": only <p> inside a card */
+.player-card p {
+    color: #AEC0D8;
+}
+
+/* links inside the nav: readable on navy */
+nav a {
+    color: #5ADB8C;
+}
