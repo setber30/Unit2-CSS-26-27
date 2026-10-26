@@ -1,0 +1,58 @@
+/* style.css · Patch Notes · Lesson 3 starter */
+
+body {
+    background-color: #101A2B;
+    color: #EAF0F7;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1, h2, h3 {
+    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
+    font-family: "Cinzel Decorative", "Jolly Lodger";
+    font-weight: 700;
+}
+
+h1 {
+    color: #5ADB8C;
+}
+
+h2, h3 {
+    color: #F2B705;
+}
+
+.eyebrow {
+    color: #ED225D;
+}
+
+.tagline,
+blockquote {
+    color: #AEC0D8;
+}
+
+nav a {
+    color: #5ADB8C;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #F2B705;
+}
+
+blockquote {
+    border-left: 4px solid #F2B705;
+    padding-left: 16px;
+}
+
+li + li {
+    border-top: 1px solid #2B3F5F;
+}
+
+/* STEP 1 ▸ the two fonts: body, then h1, h2, h3 */
+
+/* STEP 2 ▸ sizes in rem, room between the lines */
+
+/* STEP 3 ▸ small uppercase labels: .eyebrow and nav a */
+
+/* CHECK ▸ every paragraph easy to read from your seat? */
+
+/* DONE EARLY ▸ the Extra slide: text-shadow, link underlines */

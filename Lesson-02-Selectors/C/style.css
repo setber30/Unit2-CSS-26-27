@@ -1,0 +1,111 @@
+/* style.css · squad page (after Lesson 2B) */
+
+body {
+    background-color: #101A2B;
+    color: #EAF0F7;
+}
+
+h1 {
+    color: #5ADB8C;
+    font-size: 40px;
+}
+
+.tag {
+    background-color: #2B3F5F;
+    color: #5ADB8C;
+}
+
+/* group: every <h2> AND every <h3> */
+h2, h3 {
+    color: #F2B705;
+}
+
+/* class selector: every class="player-card" */
+.player-card {
+    border: 1px solid #2B3F5F;
+    padding: 4px 14px;
+    margin: 10px 0;
+}
+
+/* id selector: the one id="captain" */
+#captain {
+    border: 2px solid #F2B705;
+}
+
+/* descendant (space): only <p> INSIDE a card */
+.player-card p {
+    color: #AEC0D8;
+}
+
+/* descendant (space): only links INSIDE the nav */
+nav a {
+    color: #5ADB8C;
+}
+
+/* child (>): a <p> DIRECTLY inside #matches */
+#matches > p {
+    font-style: italic;
+}
+
+/* adjacent sibling (+): an <li> right AFTER an <li> */
+li + li {
+    border-top: 1px solid #2B3F5F;
+}
+
+/* NEW in 2C: the button, before any states */
+.join {
+    background-color: #5ADB8C;
+    color: #101A2B;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+}
+
+/* ===== Lesson 2C: pseudo-classes. Add your rules below. =====
+   Code along 1  nav a:hover
+   Code along 2  .join:hover  .join:active  .join:focus
+   Code along 3  .results li:first-child  .results li:last-child
+   Code along 4  .results li:nth-child(even)
+   Remember: NO space before the colon.
+*/
+
+nav a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/* the button states */
+
+/* when the mouse is over the button */
+.join:hover {
+    background-color: orange;
+}
+
+/* when the button is clicked */
+.join:active {
+    transform: scale(0.9);
+}
+
+/* when the keyboard access elements */
+.join:focus {
+    outline: 3px solid red;
+}
+
+/*  */
+
+/* .results li:first-child {
+    background-color: green;
+}
+.results li:last-child {
+    background-color: blue;
+}
+.results li:nth-child(even) {
+    color: purple;
+}
+.results li:nth-child(2) {
+    background-color: red;
+} */
+.results li:nth-child(2n+1) {
+    background-color: red;
+}
