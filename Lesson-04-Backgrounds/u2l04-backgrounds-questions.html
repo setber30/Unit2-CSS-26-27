@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Backgrounds — Questions</title>
+<style>
+  @page { size: letter portrait; margin: 0.4in; }
+  * { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: "Segoe UI", system-ui, sans-serif; color: #16233A; max-width: 7.7in; margin: 0 auto;
+         font-size: 10pt; line-height: 1.34; }
+  header { border-bottom: 3px solid #16233A; padding-bottom: 5px; margin-bottom: 8px;
+           display: flex; justify-content: space-between; align-items: baseline; }
+  h1 { font-size: 13pt; margin: 0; }
+  .sub { font-size: 8.4pt; color: #5B6B82; }
+  h2 { font-size: 11pt; margin: 11px 0 5px; padding: 0 0 2px; border-bottom: 1px solid #DCE3EC; }
+  code { font-family: "Cascadia Mono", Consolas, monospace; font-size: 8.9pt; background: #EEF2F7; padding: 1px 4px;
+         border-radius: 3px; }
+  .code { background: #1e1e1e; color: #d4d4d4; font-family: "Cascadia Mono", Consolas, monospace; font-size: 8.4pt;
+          line-height: 1.42; padding: 7px 10px; border-radius: 5px; white-space: pre; border-left: 3px solid #007acc;
+          margin: 4px 0; break-inside: avoid; }
+  .code .kw { color: #c586c0; } .code .fn { color: #dcdcaa; } .code .nu { color: #b5cea8; }
+  .code .cm { color: #6a9955; } .code .st { color: #ce9178; } .code .ln { color: #858585; }
+  .epigraph { text-align: center; font-style: italic; font-size: 10.5pt; margin: 8px 0 12px; padding: 9px 20px;
+              border-top: 1px solid #DCE3EC; border-bottom: 1px solid #DCE3EC; }
+  .note { margin: 3px 0 2px; font-size: 8.9pt; }
+  .box { border-left: 4px solid #E8A33D; background: #FFF8EA; padding: 5px 9px; border-radius: 0 4px 4px 0;
+         margin: 6px 0; font-size: 8.9pt; break-inside: avoid; }
+  .box.keep { border-left-color: #4A8B5C; background: #F0F8F2; }
+  .box b.lbl { display: block; font-size: 7.4pt; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 2px; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .timeline { display: flex; gap: 3px; margin: 0 0 10px; font-size: 7.6pt; font-family: "Cascadia Mono", monospace; }
+  .timeline div { padding: 4px 7px; border-radius: 3px; color: #fff; white-space: nowrap; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; font-size: 8.9pt; margin: 3px 0; break-inside: avoid; }
+  th { background: #E8EDF4; text-align: left; padding: 4px 7px; font-size: 7.6pt; letter-spacing: .06em;
+       text-transform: uppercase; color: #5B6B82; }
+  td { padding: 4px 7px; border-bottom: 1px solid #DCE3EC; vertical-align: top; }
+  .prob { break-inside: avoid; margin-bottom: 8px; }
+  .blank { border-bottom: 1.5px solid #16233A; min-height: 26px; margin: 4px 0 10px; }
+  .who { display: flex; gap: 24px; font-size: 9.5pt; margin: 0 0 6px; }
+  .who span { flex: 1; border-bottom: 1px solid #16233A; padding-bottom: 2px; }
+  table.fill td { height: 28px; }
+  .page-break { break-before: page; }
+  footer { margin-top: 8px; padding-top: 5px; border-top: 1px solid #DCE3EC; font-size: 8.2pt; color: #5B6B82; }
+  @media screen { body { padding: 22px 16px; font-size: max(14px, 10pt); } code, .code, table, .note, .box, footer { font-size: max(14px, 9pt); } }
+</style></head><body>
+<header><h1>Backgrounds &mdash; Questions</h1><span class="sub">Unit 2 &middot; Lesson 4</span></header>
+<div class="who"><span>Name</span><span>Period</span></div>
+<p class="note">Trace each one by hand first. Then answer on your screen when the slide comes up.</p>
+<div class="cols"><div class="prob"><h2>1 &middot; Which property takes linear-gradient(navy, black)?</h2><ol type="A"><li>background-image</li><li>background-color</li><li>color</li><li>background-gradient</li><li>font-color</li></ol></div><div class="prob"><h2>2 &middot; An image is 400px wide. No background-size. The header is 1200px wide. How many copies across?</h2><div class="blank"></div><div class="blank"></div></div><div class="prob"><h2>3 &middot; Which layer do you see on top?</h2><div class="code"><span class="ln"> 1</span>  background-image:
+<span class="ln"> 2</span>    <span class="fn">url</span>(<span class="st">&quot;arena.png&quot;</span>),
+<span class="ln"> 3</span>    linear-<span class="fn">gradient</span>(
+<span class="ln"> 4</span>      <span class="fn">rgba</span>(<span class="nu">0</span>, <span class="nu">0</span>, <span class="nu">0</span>, <span class="nu">0.8</span>),
+<span class="ln"> 5</span>      <span class="fn">rgba</span>(<span class="nu">0</span>, <span class="nu">0</span>, <span class="nu">0</span>, <span class="nu">0.8</span>));</div><ol type="A"><li>The arena image</li><li>The dark tint</li><li>They mix 50/50</li><li>Neither: it&#x27;s an error</li><li>Whichever loads last</li></ol></div><div class="prob"><h2>4 &middot; The path has a typo, so arena.png isn&#x27;t found. What color does the header show?</h2><div class="blank"></div><div class="blank"></div></div></div>
+</body></html>

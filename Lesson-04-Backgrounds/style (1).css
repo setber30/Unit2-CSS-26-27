@@ -1,0 +1,101 @@
+/* style.css · Patch Notes · Lesson 4 starter (Lesson 3 solution + STEP marks) */
+
+body {
+    background-color: #101A2B;
+    color: #EAF0F7;
+}
+
+h1 {
+    color: #5ADB8C;
+}
+
+h2, h3 {
+    color: #F2B705;
+}
+
+.eyebrow {
+    color: #ED225D;
+}
+
+.tagline,
+blockquote {
+    color: #AEC0D8;
+}
+
+nav a {
+    color: #5ADB8C;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #F2B705;
+}
+
+blockquote {
+    border-left: 4px solid #F2B705;
+    padding-left: 16px;
+}
+
+li + li {
+    border-top: 1px solid #2B3F5F;
+}
+
+/* Lesson 3 · fonts */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+
+/* Lesson 3 · sizes and room */
+body {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* Lesson 3 · labels */
+.eyebrow,
+nav a {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* STEP 1 ▸ paint the three sections */
+
+section {
+    background-color: #ff1717;
+    padding: 4px 24px 16px;
+    margin-bottom: 16px;
+}
+
+/* STEP 2 ▸ the header: gradient, then image, then overlay */
+
+header {
+    /* background-image: linear-gradient(135deg, #2B3F5F, #101A2B); */
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBTA7-NtGbyUTfNkWfYkqk2Pz-xAFEGoWGNQ3sqjBL6g&s=10);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 32px 24px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+footer {
+    background-image: linear-gradient(360deg, #09a0ca, #042363);
+    border-radius: 16px;
+    padding: 1px;
+}
