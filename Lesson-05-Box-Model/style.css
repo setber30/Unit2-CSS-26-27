@@ -1,0 +1,124 @@
+/* style.css · Patch Notes · Lesson 5 starter (Lesson 4 solution + STEP marks) */
+
+body {
+    background-color: #101A2B;
+    color: #EAF0F7;
+}
+
+h1 {
+    color: #5ADB8C;
+}
+
+h2, h3 {
+    color: #F2B705;
+}
+
+.eyebrow {
+    color: #ED225D;
+}
+
+.tagline,
+blockquote {
+    color: #AEC0D8;
+}
+
+nav a {
+    color: #5ADB8C;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #F2B705;
+}
+
+blockquote {
+    border-left: 4px solid #F2B705;
+    padding-left: 16px;
+}
+
+li + li {
+    border-top: 1px solid #2B3F5F;
+}
+
+/* Lesson 3 · fonts */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+
+/* Lesson 3 · sizes and room */
+body {
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+/* Lesson 3 · labels */
+.eyebrow,
+nav a {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+/* Lesson 4 · section panels (padding and margin explained today) */
+section {
+    background-color: #18263C;
+    padding: 4px 24px 16px;
+    margin-bottom: 16px;
+}
+
+/* Lesson 4 · header layers: tint on top, picture under it */
+header {
+    background-color: #101A2B;
+    background-image:
+        linear-gradient(rgba(16, 26, 43, 0.8),
+                        rgba(16, 26, 43, 0.8)),
+        url("arena.png");
+    background-size: cover;
+    background-position: center;
+    padding: 32px 24px;
+}
+
+/* STEP 1 ▸ a border around each section */
+
+section {
+    border: 1px      #2B3F5F;
+}
+
+/* STEP 2 ▸ the notice bar */
+
+/*
+padding: 12px;             all four 
+padding: 12px 20px;        top+bottom, left+right 
+padding: 4px 24px 16px;    top, left+right, bottom 
+padding: 1px 2px 3px 4px;  top right bottom left
+*/
+
+.notice {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px dashed #52B705;
+    background-color: #2A2410;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-top: 0;
+    margin-bottom: 24px;
+}
+
+/* STEP 3 ▸ count padding and border inside the width */
+
+/* STEP 4 ▸ room below the notice */
