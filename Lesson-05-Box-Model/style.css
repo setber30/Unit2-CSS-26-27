@@ -108,13 +108,16 @@ padding: 4px 24px 16px;    top, left+right, bottom
 padding: 1px 2px 3px 4px;  top right bottom left
 */
 
+* {
+    box-sizing: border-box;
+}
+
 .notice {
     width: 100%;
     padding: 12px 20px;
     border: 2px dashed #52B705;
     background-color: #2A2410;
     border-radius: 10px;
-    box-sizing: border-box;
     margin-top: 0;
     margin-bottom: 24px;
 }
