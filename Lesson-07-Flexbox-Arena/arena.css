@@ -1,0 +1,333 @@
+/* arena.css · Flexbox Arena · DON'T EDIT THIS FILE
+   It draws the page and the TARGET courts (.t1 ... .t9). */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #101A2B;
+    color: #EAF0F7;
+    font-family: system-ui, "Segoe UI", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.arena-top,
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.arena-top {
+    padding-top: 24px;
+}
+
+.kicker {
+    color: #F2B705;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+h1 {
+    color: #5ADB8C;
+    font-size: 2.5rem;
+    margin: 4px 0;
+}
+
+.lead {
+    color: #AEC0D8;
+    max-width: 640px;
+}
+
+code {
+    font-family: Consolas, "Cascadia Mono", monospace;
+    color: #F2B705;
+}
+
+.score {
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+#bonus {
+    color: #F2B705;
+}
+
+.level {
+    background-color: #18263C;
+    border: 1px solid #2B3F5F;
+    border-radius: 10px;
+    padding: 12px 20px 16px;
+    margin: 20px 0;
+}
+
+.level.cleared {
+    border-color: #5ADB8C;
+    box-shadow: 0 0 0 2px #5ADB8C;
+}
+
+.level.boss {
+    border-color: #F2B705;
+}
+
+.level-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.level h2 {
+    margin: 6px 0;
+    font-size: 1.25rem;
+    color: #F2B705;
+}
+
+.status {
+    margin: 0;
+    font-weight: 700;
+    color: #AEC0D8;
+}
+
+.level.cleared .status {
+    color: #5ADB8C;
+}
+
+.goal {
+    margin: 4px 0 12px;
+}
+
+details {
+    margin-top: 10px;
+    color: #AEC0D8;
+}
+
+summary {
+    cursor: pointer;
+    color: #5ADB8C;
+    font-weight: 600;
+}
+
+summary:focus-visible {
+    outline: 3px solid #F2B705;
+    outline-offset: 2px;
+}
+
+/* the two courts, side by side when there's room */
+.courts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.court {
+    width: 440px;
+    max-width: 100%;
+    overflow-x: auto;
+    background-color: #0B1220;
+    border: 2px solid #2B3F5F;
+    border-radius: 8px;
+    padding: 10px;
+    position: relative;
+}
+
+.court>div {
+    width: 416px;
+}
+
+.court::before {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+}
+
+.court.target::before {
+    content: "TARGET";
+    color: #F2B705;
+}
+
+.court.yours::before {
+    content: "YOURS";
+    color: #5ADB8C;
+}
+
+.court.target {
+    border-style: dashed;
+}
+
+/* the pieces (same in both courts) */
+.tile,
+.game {
+    width: 64px;
+    height: 64px;
+    display: grid;
+    place-items: center;
+    background-color: #C2185B;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.game {
+    width: 120px;
+    height: 56px;
+    background-color: #6C4AB6;
+}
+
+.logo {
+    height: 48px;
+    padding: 0 14px;
+    display: grid;
+    place-items: center;
+    background-color: #5ADB8C;
+    color: #101A2B;
+    font-weight: 800;
+    border-radius: 6px;
+}
+
+.menu {
+    height: 28px;
+    width: 90px;
+    display: grid;
+    place-items: center;
+    background-color: #2B3F5F;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-radius: 4px;
+}
+
+.play {
+    padding: 10px 22px;
+    background-color: #F2B705;
+    color: #101A2B;
+    font-weight: 800;
+    border-radius: 999px;
+}
+
+.item {
+    height: 34px;
+    padding: 0 12px;
+    display: grid;
+    align-items: center;
+    background-color: #2B3F5F;
+    border-radius: 4px;
+}
+
+.card {
+    padding: 12px;
+    background-color: #2B3F5F;
+    border: 1px solid #AEC0D8;
+    border-radius: 6px;
+}
+
+.links a {
+    color: #5ADB8C;
+    font-weight: 600;
+}
+
+.pic {
+    height: 90px;
+    display: grid;
+    place-items: center;
+    background-color: #6C4AB6;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.text {
+    padding: 8px;
+}
+
+/* courts with a fixed height */
+.t3,
+.l3 {
+    min-height: 64px;
+    background-color: #18263C;
+    padding: 8px;
+}
+
+.t4,
+.l4 {
+    height: 160px;
+    background-color: #18263C;
+}
+
+.t8,
+.l8 {
+    min-height: 64px;
+    background-color: #18263C;
+    padding: 8px 12px;
+}
+
+/* ===== TARGETS (no peeking: the fun is in working it out) ===== */
+.t1 {
+    display: flex;
+}
+
+.t2 {
+    display: flex;
+    gap: 16px;
+}
+
+.t3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.t4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.t5 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.t6 {
+    display: flex;
+    gap: 12px;
+}
+
+.t6 .card {
+    flex: 1;
+}
+
+.t7 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.t8 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.t8 .links {
+    display: flex;
+    gap: 16px;
+}
+
+.t9 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+}
+
+.t9 .pic,
+.t9 .text {
+    flex: 1;
+}

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Arena · GameHub Training</title>
+    <!-- arena.css draws the arena and the TARGET courts. Don't edit it. -->
+    <link rel="stylesheet" href="arena.css">
+    <!-- style.css is YOUR file. All your work goes there. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="arena-top">
+        <p class="kicker">GameHub training · Day 1</p>
+        <h1>Flexbox Arena</h1>
+        <p class="lead">Make <b>YOURS</b> match the <b>TARGET</b>. Write CSS in <code>style.css</code>, save, refresh. A
+            level turns green when every box is in the right place.</p>
+        <p class="score" aria-live="polite">Levels cleared: <span id="cleared">0</span> / 8 <span id="bonus"></span></p>
+    </header>
+
+    <main>
+        <!-- LEVEL 1 -->
+        <section class="level" aria-labelledby="h1-l1">
+            <div class="level-head">
+                <h2 id="h1-l1">Level 1 · Line up</h2>
+                <p class="status">Not yet</p>
+            </div>
+            <p class="goal">Four player tiles sit in a column. Put them in a row.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t1">
+                        <div class="tile" data-k>P1</div>
+                        <div class="tile" data-k>P2</div>
+                        <div class="tile" data-k>P3</div>
+                        <div class="tile" data-k>P4</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l1">
+                        <div class="tile" data-k>P1</div>
+                        <div class="tile" data-k>P2</div>
+                        <div class="tile" data-k>P3</div>
+                        <div class="tile" data-k>P4</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>One property, on the parent <code>.l1</code>.
+            </details>
+        </section>
+
+        <!-- LEVEL 2 -->
+        <section class="level" aria-labelledby="h1-l2">
+            <div class="level-head">
+                <h2 id="h1-l2">Level 2 · Breathing room</h2>
+                <p class="status">Not yet</p>
+            </div>
+            <p class="goal">A row again, but now with 16px between the tiles. No margins allowed.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t2">
+                        <div class="tile" data-k>P1</div>
+                        <div class="tile" data-k>P2</div>
+                        <div class="tile" data-k>P3</div>
+                        <div class="tile" data-k>P4</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l2">
+                        <div class="tile" data-k>P1</div>
+                        <div class="tile" data-k>P2</div>
+                        <div class="tile" data-k>P3</div>
+                        <div class="tile" data-k>P4</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>Two properties on <code>.l2</code>. Space between items only, never at the ends.
+            </details>
+        </section>
+
+        <!-- LEVEL 3 -->
+        <section class="level" aria-labelledby="h1-l3">
+            <div class="level-head">
+                <h2 id="h1-l3">Level 3 · Navbar</h2>
+                <p class="status">Not yet</p>
+            </div>
+            <p class="goal">Logo at the left edge, menu at the right edge, both centered top to bottom.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t3">
+                        <div class="logo" data-k>GH</div>
+                        <div class="menu" data-k>MENU</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l3">
+                        <div class="logo" data-k>GH</div>
+                        <div class="menu" data-k>MENU</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>Three properties on <code>.l3</code>. One works along the row, one across it.
+            </details>
+        </section>
+
+        <!-- LEVEL 4 -->
+        <section class="level" aria-labelledby="h1-l4">
+            <div class="level-head">
+                <h2 id="h1-l4">Level 4 · Press start</h2>
+                <p class="status">Not yet</p>
+            </div>
+            <p class="goal">Put the PLAY button dead center: left to right AND top to bottom.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t4">
+                        <div class="play" data-k>▶ PLAY</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l4">
+                        <div class="play" data-k>▶ PLAY</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>The same two "line up" properties as Level 3, both set to the same value.
+            </details>
+        </section>
+
+        <!-- LEVEL 5 -->
+        <section class="level" aria-labelledby="h1-l5">
+            <div class="level-head">
+                <h2 id="h1-l5">Level 5 · Side menu</h2>
+                <p class="status">Not yet</p>
+            </div>
+            <p class="goal">A column of menu buttons with 8px between them.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t5">
+                        <div class="item" data-k>New game</div>
+                        <div class="item" data-k>Continue</div>
+                        <div class="item" data-k>Settings</div>
+                        <div class="item" data-k>Quit</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l5">
+                        <div class="item" data-k>New game</div>
+                        <div class="item" data-k>Continue</div>
+                        <div class="item" data-k>Settings</div>
+                        <div class="item" data-k>Quit</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>Flex rows by default. One property turns the row into a column; <code>gap</code>
+                works in columns too.
+            </details>
+        </section>
+
+        <!-- LEVEL 6 -->
+        <section class="level" aria-labelledby="h1-l6">
+            <div class="level-head">
+                <h2 id="h1-l6">Level 6 · Fair fight</h2>
+                <p class="status">Not yet</p>
+            </div>
+            <p class="goal">Three cards side by side, 12px apart, all the SAME width (even though their text isn't the
+                same length).</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t6">
+                        <div class="card" data-k>Knight</div>
+                        <div class="card" data-k>Wizard of the Eastern Tower</div>
+                        <div class="card" data-k>Rogue</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l6">
+                        <div class="card" data-k>Knight</div>
+                        <div class="card" data-k>Wizard of the Eastern Tower</div>
+                        <div class="card" data-k>Rogue</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>Two properties on the parent <code>.l6</code>, and one on each <code>.card</code>
+                that shares the row equally.
+            </details>
+        </section>
+
+        <!-- LEVEL 7 -->
+        <section class="level" aria-labelledby="h1-l7">
+            <div class="level-head">
+                <h2 id="h1-l7">Level 7 · Game library</h2>
+                <p class="status">Not yet</p>
+            </div>
+            <p class="goal">Seven game tiles in rows, 12px apart. When a row is full, the next tile goes to a new line
+                instead of squeezing.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t7">
+                        <div class="game" data-k>1</div>
+                        <div class="game" data-k>2</div>
+                        <div class="game" data-k>3</div>
+                        <div class="game" data-k>4</div>
+                        <div class="game" data-k>5</div>
+                        <div class="game" data-k>6</div>
+                        <div class="game" data-k>7</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l7">
+                        <div class="game" data-k>1</div>
+                        <div class="game" data-k>2</div>
+                        <div class="game" data-k>3</div>
+                        <div class="game" data-k>4</div>
+                        <div class="game" data-k>5</div>
+                        <div class="game" data-k>6</div>
+                        <div class="game" data-k>7</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>Three properties on <code>.l7</code>. Try it with only two first and watch the
+                tiles squeeze.
+            </details>
+        </section>
+
+        <!-- LEVEL 8 -->
+        <section class="level boss" aria-labelledby="h1-l8">
+            <div class="level-head">
+                <h2 id="h1-l8">Level 8 · BOSS: the GameHub header</h2>
+                <p class="status">Not yet</p>
+            </div>
+            <p class="goal">This is the real header you'll build for GameHub. Logo left, the three links right and
+                centered top to bottom, with 16px between the links. You need flex in TWO places.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t8">
+                        <div class="logo" data-k>🎮 GameHub</div>
+                        <nav class="links" data-k><a href="#" data-k>Games</a><a href="#" data-k>Teams</a><a href="#"
+                                data-k>Join</a></nav>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l8">
+                        <div class="logo" data-k>🎮 GameHub</div>
+                        <nav class="links" data-k><a href="#" data-k>Games</a><a href="#" data-k>Teams</a><a href="#"
+                                data-k>Join</a></nav>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>A flex container can be inside another one. The header is the parent of the logo
+                and the nav; the nav is the parent of the links.
+            </details>
+        </section>
+
+        <!-- LEVEL 9 (BONUS) -->
+        <section class="level bonus" aria-labelledby="h1-l9">
+            <div class="level-head">
+                <h2 id="h1-l9">Bonus · Flip it</h2>
+                <p class="status">Not yet</p>
+            </div>
+            <p class="goal">The picture is first in the HTML, but it must show on the RIGHT. Equal halves, 16px apart.
+                Don't touch the HTML.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t9">
+                        <div class="pic" data-k>PICTURE</div>
+                        <div class="text" data-k>Join a thriving community of gamers.</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l9">
+                        <div class="pic" data-k>PICTURE</div>
+                        <div class="text" data-k>Join a thriving community of gamers.</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>One value of <code>flex-direction</code> runs the row backwards.
+            </details>
+        </section>
+    </main>
+
+    <script src="check.js"></script>
+</body>
+
+</html>

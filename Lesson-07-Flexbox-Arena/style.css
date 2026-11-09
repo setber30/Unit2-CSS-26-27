@@ -1,0 +1,75 @@
+/* style.css · Flexbox Arena · YOUR FILE
+   Write your CSS inside each rule. Save, then refresh the page.
+   A level turns green when YOURS matches the TARGET exactly. */
+
+/* LEVEL 1 · Line up ▸ the tiles in a row */
+.l1 {
+   display: flex;
+}
+
+/* LEVEL 2 · Breathing room ▸ a row with 16px between the tiles */
+.l2 {
+   display: flex;
+   gap: 16px;
+}
+
+/* LEVEL 3 · Navbar ▸ logo left, menu right, both centered top to bottom */
+.l3 {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+/* LEVEL 4 · Press start ▸ PLAY in the dead center */
+.l4 {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* LEVEL 5 · Side menu ▸ a column with 8px between buttons */
+.l5 {
+   display: flex;
+   gap: 8px;
+   flex-flow: column;
+}
+
+/* LEVEL 6 · Fair fight ▸ three equal-width cards, 12px apart (TWO rules) */
+.l6 {
+   display: flex;
+   flex-wrap: row;
+   gap: 12px;
+}
+
+.l6 .card {
+   flex: 1;
+}
+
+/* LEVEL 7 · Game library ▸ rows of tiles, 12px apart, wrapping to a new line */
+.l7 {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 12px;
+}
+
+/* LEVEL 8 · BOSS ▸ the GameHub header (TWO rules: the header and the nav) */
+.l8 {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.l8 .links {
+   display: flex;
+   gap: 16px;
+}
+
+/* BONUS · Flip it ▸ picture on the right, equal halves, 16px apart (TWO rules) */
+.l9 {
+
+}
+
+.l9 .pic,
+.l9 .text {
+
+}
