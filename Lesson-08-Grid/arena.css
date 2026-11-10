@@ -1,0 +1,348 @@
+/* arena.css · Grid Arena · DON'T EDIT THIS FILE
+   It draws the page and the TARGET courts (.t1 ... .t9). */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #101A2B;
+    color: #EAF0F7;
+    font-family: system-ui, "Segoe UI", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.arena-top,
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.arena-top {
+    padding-top: 24px;
+}
+
+.kicker {
+    color: #F2B705;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+h1 {
+    color: #5ADB8C;
+    font-size: 2.5rem;
+    margin: 4px 0;
+}
+
+.lead {
+    color: #AEC0D8;
+    max-width: 660px;
+}
+
+code {
+    font-family: Consolas, "Cascadia Mono", monospace;
+    color: #F2B705;
+}
+
+.score {
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+#bonus {
+    color: #F2B705;
+}
+
+.level {
+    background-color: #18263C;
+    border: 1px solid #2B3F5F;
+    border-radius: 10px;
+    padding: 12px 20px 16px;
+    margin: 20px 0;
+}
+
+.level.cleared {
+    border-color: #5ADB8C;
+    box-shadow: 0 0 0 2px #5ADB8C;
+}
+
+.level.boss {
+    border-color: #F2B705;
+}
+
+.level-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.head-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.level h2 {
+    margin: 6px 0;
+    font-size: 1.25rem;
+    color: #F2B705;
+}
+
+.status {
+    margin: 0;
+    font-weight: 700;
+    color: #AEC0D8;
+}
+
+.level.cleared .status {
+    color: #5ADB8C;
+}
+
+.goal {
+    margin: 4px 0 12px;
+}
+
+details {
+    margin-top: 10px;
+    color: #AEC0D8;
+}
+
+summary {
+    cursor: pointer;
+    color: #5ADB8C;
+    font-weight: 600;
+}
+
+summary:focus-visible,
+.narrow-btn:focus-visible {
+    outline: 3px solid #F2B705;
+    outline-offset: 2px;
+}
+
+.narrow-btn {
+    font: inherit;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #101A2B;
+    background-color: #AEC0D8;
+    border: 0;
+    border-radius: 6px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.narrow-btn[aria-pressed="true"] {
+    background-color: #F2B705;
+}
+
+/* the two courts, side by side when there's room */
+.courts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.court {
+    width: 440px;
+    max-width: 100%;
+    overflow-x: auto;
+    background-color: #0B1220;
+    border: 2px solid #2B3F5F;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.court>div {
+    width: 416px;
+}
+
+.narrow .court>div {
+    width: 280px;
+}
+
+.court::before {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    margin-bottom: 8px;
+}
+
+.court.target::before {
+    content: "TARGET";
+    color: #F2B705;
+}
+
+.court.yours::before {
+    content: "YOURS";
+    color: #5ADB8C;
+}
+
+.court.target {
+    border-style: dashed;
+}
+
+/* the pieces (same in both courts) */
+.cell {
+    min-height: 56px;
+    display: grid;
+    place-items: center;
+    background-color: #C2185B;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.cell.big,
+.cell.tall {
+    background-color: #F2B705;
+    color: #101A2B;
+}
+
+.game {
+    height: 56px;
+    display: grid;
+    place-items: center;
+    background-color: #6C4AB6;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.side,
+.main {
+    height: 100px;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.side {
+    background-color: #2B3F5F;
+}
+
+.main {
+    background-color: #1F6E4A;
+}
+
+.sc {
+    padding: 6px 10px;
+    background-color: #2B3F5F;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.sc.name {
+    background-color: #1F6E4A;
+}
+
+.title {
+    padding: 6px 10px;
+    background-color: #F2B705;
+    color: #101A2B;
+    font-weight: 800;
+    border-radius: 6px;
+}
+
+.card {
+    padding: 12px;
+    background-color: #2B3F5F;
+    border: 1px solid #AEC0D8;
+    border-radius: 6px;
+}
+
+.fcol {
+    min-height: 70px;
+    padding: 10px;
+    background-color: #2B3F5F;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.bottom {
+    padding: 6px 10px;
+    background-color: #0F1724;
+    border: 1px solid #2B3F5F;
+    border-radius: 6px;
+    color: #AEC0D8;
+    text-align: center;
+}
+
+/* ===== TARGETS (no peeking: the fun is in working it out) ===== */
+.t1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.t2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.t3 {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 12px;
+}
+
+.t4 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 8px;
+}
+
+.t5 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.t5 .big {
+    grid-column: span 2;
+}
+
+.t6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.t6 .tall {
+    grid-row: span 2;
+}
+
+.t7 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 12px;
+}
+
+.t8 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+}
+
+.t8 .title {
+    grid-column: 1 / -1;
+}
+
+.t9 {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 16px;
+}
+
+.t9 .bottom {
+    grid-column: 1 / -1;
+}

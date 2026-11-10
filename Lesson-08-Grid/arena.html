@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Arena · GameHub Training</title>
+    <!-- arena.css draws the arena and the TARGET courts. Don't edit it. -->
+    <link rel="stylesheet" href="arena.css">
+    <!-- style.css is YOUR file. All your work goes there. -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="arena-top">
+        <p class="kicker">GameHub training · Day 2</p>
+        <h1>Grid Arena</h1>
+        <p class="lead">Make <b>YOURS</b> match the <b>TARGET</b>. Write CSS in <code>style.css</code>, save, refresh.
+            Levels 7 and 8 are also checked at a narrower width: press <b>Show narrow</b> to see it.</p>
+        <p class="score" aria-live="polite">Levels cleared: <span id="cleared">0</span> / 8 <span id="bonus"></span></p>
+    </header>
+
+    <main>
+        <!-- LEVEL 1 -->
+        <section class="level" aria-labelledby="h-l1">
+            <div class="level-head">
+                <h2 id="h-l1">Level 1 · Three columns</h2>
+                <div class="head-right">
+                    <p class="status">Not yet</p>
+                </div>
+            </div>
+            <p class="goal">Six tiles in a single column. Make three equal columns (two rows of three).</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t1">
+                        <div class="cell" data-k>1</div>
+                        <div class="cell" data-k>2</div>
+                        <div class="cell" data-k>3</div>
+                        <div class="cell" data-k>4</div>
+                        <div class="cell" data-k>5</div>
+                        <div class="cell" data-k>6</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l1">
+                        <div class="cell" data-k>1</div>
+                        <div class="cell" data-k>2</div>
+                        <div class="cell" data-k>3</div>
+                        <div class="cell" data-k>4</div>
+                        <div class="cell" data-k>5</div>
+                        <div class="cell" data-k>6</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>Two properties on <code>.l1</code>: turn grid on, then describe the columns.
+                <code>1fr</code> means one share.
+            </details>
+        </section>
+        <!-- LEVEL 2 -->
+        <section class="level" aria-labelledby="h-l2">
+            <div class="level-head">
+                <h2 id="h-l2">Level 2 · Breathing room</h2>
+                <div class="head-right">
+                    <p class="status">Not yet</p>
+                </div>
+            </div>
+            <p class="goal">Three equal columns again, with 12px between all the tiles, across AND down. No margins.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t2">
+                        <div class="cell" data-k>1</div>
+                        <div class="cell" data-k>2</div>
+                        <div class="cell" data-k>3</div>
+                        <div class="cell" data-k>4</div>
+                        <div class="cell" data-k>5</div>
+                        <div class="cell" data-k>6</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l2">
+                        <div class="cell" data-k>1</div>
+                        <div class="cell" data-k>2</div>
+                        <div class="cell" data-k>3</div>
+                        <div class="cell" data-k>4</div>
+                        <div class="cell" data-k>5</div>
+                        <div class="cell" data-k>6</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>The same <code>gap</code> you used in flexbox works in grid, in both directions.
+                Try <code>repeat(3, 1fr)</code> to avoid typing 1fr three times.
+            </details>
+        </section>
+        <!-- LEVEL 3 -->
+        <section class="level" aria-labelledby="h-l3">
+            <div class="level-head">
+                <h2 id="h-l3">Level 3 · Sidebar</h2>
+                <div class="head-right">
+                    <p class="status">Not yet</p>
+                </div>
+            </div>
+            <p class="goal">A sidebar exactly 120px wide on the left; the main area takes ALL the rest. 12px between
+                them.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t3">
+                        <div class="side" data-k>SIDEBAR</div>
+                        <div class="main" data-k>MAIN</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l3">
+                        <div class="side" data-k>SIDEBAR</div>
+                        <div class="main" data-k>MAIN</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>You can mix units: a fixed <code>px</code> column and a <code>fr</code> column
+                that takes what's left.
+            </details>
+        </section>
+        <!-- LEVEL 4 -->
+        <section class="level" aria-labelledby="h-l4">
+            <div class="level-head">
+                <h2 id="h-l4">Level 4 · Scoreboard</h2>
+                <div class="head-right">
+                    <p class="status">Not yet</p>
+                </div>
+            </div>
+            <p class="goal">Three columns: the player name column is TWICE as wide as score and rank. 8px between
+                everything.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t4">
+                        <div class="sc name" data-k>PixelFox</div>
+                        <div class="sc" data-k>2400</div>
+                        <div class="sc" data-k>#1</div>
+                        <div class="sc name" data-k>NovaBlade</div>
+                        <div class="sc" data-k>2150</div>
+                        <div class="sc" data-k>#2</div>
+                        <div class="sc name" data-k>Byte</div>
+                        <div class="sc" data-k>1980</div>
+                        <div class="sc" data-k>#3</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l4">
+                        <div class="sc name" data-k>PixelFox</div>
+                        <div class="sc" data-k>2400</div>
+                        <div class="sc" data-k>#1</div>
+                        <div class="sc name" data-k>NovaBlade</div>
+                        <div class="sc" data-k>2150</div>
+                        <div class="sc" data-k>#2</div>
+                        <div class="sc name" data-k>Byte</div>
+                        <div class="sc" data-k>1980</div>
+                        <div class="sc" data-k>#3</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>Shares don't have to be equal: <code>2fr</code> gets twice as much as
+                <code>1fr</code>.
+            </details>
+        </section>
+        <!-- LEVEL 5 -->
+        <section class="level" aria-labelledby="h-l5">
+            <div class="level-head">
+                <h2 id="h-l5">Level 5 · Featured game</h2>
+                <div class="head-right">
+                    <p class="status">Not yet</p>
+                </div>
+            </div>
+            <p class="goal">Three equal columns, 12px gaps. The FEATURED tile stretches across two columns.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t5">
+                        <div class="cell big" data-k>FEATURED</div>
+                        <div class="cell" data-k>2</div>
+                        <div class="cell" data-k>3</div>
+                        <div class="cell" data-k>4</div>
+                        <div class="cell" data-k>5</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l5">
+                        <div class="cell big" data-k>FEATURED</div>
+                        <div class="cell" data-k>2</div>
+                        <div class="cell" data-k>3</div>
+                        <div class="cell" data-k>4</div>
+                        <div class="cell" data-k>5</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>Set up the grid on <code>.l5</code>. Then tell <code>.l5 .big</code> how many
+                columns to <b>span</b>.
+            </details>
+        </section>
+        <!-- LEVEL 6 -->
+        <section class="level" aria-labelledby="h-l6">
+            <div class="level-head">
+                <h2 id="h-l6">Level 6 · Tall card</h2>
+                <div class="head-right">
+                    <p class="status">Not yet</p>
+                </div>
+            </div>
+            <p class="goal">Three equal columns, 12px gaps. The TALL card is two rows tall; the others fill in around
+                it.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t6">
+                        <div class="cell tall" data-k>TALL</div>
+                        <div class="cell" data-k>2</div>
+                        <div class="cell" data-k>3</div>
+                        <div class="cell" data-k>4</div>
+                        <div class="cell" data-k>5</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l6">
+                        <div class="cell tall" data-k>TALL</div>
+                        <div class="cell" data-k>2</div>
+                        <div class="cell" data-k>3</div>
+                        <div class="cell" data-k>4</div>
+                        <div class="cell" data-k>5</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>Like Level 5, but rows instead of columns.
+            </details>
+        </section>
+        <!-- LEVEL 7 -->
+        <section class="level" data-widths="416 280" aria-labelledby="h-l7">
+            <div class="level-head">
+                <h2 id="h-l7">Level 7 · Game library (responsive)</h2>
+                <div class="head-right"><button type="button" class="narrow-btn" aria-pressed="false">Show
+                        narrow</button>
+                    <p class="status">Not yet</p>
+                </div>
+            </div>
+            <p class="goal">As many tiles per row as fit, each at least 120px wide, sharing the leftover space; 12px
+                gaps. It must ALSO match when the court is narrow.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t7">
+                        <div class="game" data-k>1</div>
+                        <div class="game" data-k>2</div>
+                        <div class="game" data-k>3</div>
+                        <div class="game" data-k>4</div>
+                        <div class="game" data-k>5</div>
+                        <div class="game" data-k>6</div>
+                        <div class="game" data-k>7</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l7">
+                        <div class="game" data-k>1</div>
+                        <div class="game" data-k>2</div>
+                        <div class="game" data-k>3</div>
+                        <div class="game" data-k>4</div>
+                        <div class="game" data-k>5</div>
+                        <div class="game" data-k>6</div>
+                        <div class="game" data-k>7</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary><code>repeat(3, 1fr)</code> looks right here but fails narrow. You need
+                <code>repeat(auto-fit, minmax(&hellip;, &hellip;))</code>.
+            </details>
+        </section>
+        <!-- LEVEL 8 -->
+        <section class="level boss" data-widths="416 280" aria-labelledby="h-l8">
+            <div class="level-head">
+                <h2 id="h-l8">Level 8 · BOSS: GameHub features</h2>
+                <div class="head-right"><button type="button" class="narrow-btn" aria-pressed="false">Show
+                        narrow</button>
+                    <p class="status">Not yet</p>
+                </div>
+            </div>
+            <p class="goal">This is the real GameHub features section. The title spans the FULL width, whatever the
+                number of columns. Cards: as many per row as fit, at least 120px each, 16px gaps. Must also match
+                narrow.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t8">
+                        <div class="title" data-k>Why GameHub?</div>
+                        <div class="card" data-k>🎮 1,000+ games</div>
+                        <div class="card" data-k>👥 Find a squad</div>
+                        <div class="card" data-k>🏆 Weekly tournaments</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l8">
+                        <div class="title" data-k>Why GameHub?</div>
+                        <div class="card" data-k>🎮 1,000+ games</div>
+                        <div class="card" data-k>👥 Find a squad</div>
+                        <div class="card" data-k>🏆 Weekly tournaments</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>Level 7's columns, plus one rule on <code>.l8 .title</code>. <code>span 3</code>
+                breaks when there are only 2 columns: span from the first line to the last line instead
+                (<code>1 / -1</code>).
+            </details>
+        </section>
+        <!-- BONUS -->
+        <section class="level bonus" aria-labelledby="h-l9">
+            <div class="level-head">
+                <h2 id="h-l9">Bonus · The GameHub footer</h2>
+                <div class="head-right">
+                    <p class="status">Not yet</p>
+                </div>
+            </div>
+            <p class="goal">Three columns: About is twice as wide as Links and Social; 16px gaps. The copyright bar
+                spans the full width underneath.</p>
+            <div class="courts">
+                <div class="court target">
+                    <div class="t9">
+                        <div class="fcol" data-k>About GameHub</div>
+                        <div class="fcol" data-k>Links</div>
+                        <div class="fcol" data-k>Social</div>
+                        <div class="bottom" data-k>© 2026 GameHub</div>
+                    </div>
+                </div>
+                <div class="court yours">
+                    <div class="l9">
+                        <div class="fcol" data-k>About GameHub</div>
+                        <div class="fcol" data-k>Links</div>
+                        <div class="fcol" data-k>Social</div>
+                        <div class="bottom" data-k>© 2026 GameHub</div>
+                    </div>
+                </div>
+            </div>
+            <details>
+                <summary>Hint</summary>Level 4's column idea plus Level 8's full-width trick.
+            </details>
+        </section>
+    </main>
+
+    <script src="check.js"></script>
+</body>
+
+</html>

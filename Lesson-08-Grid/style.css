@@ -1,0 +1,82 @@
+/* style.css · Grid Arena · YOUR FILE
+   Write your CSS inside each rule. Save, then refresh the page.
+   A level turns green when YOURS matches the TARGET exactly. */
+
+/* LEVEL 1 · Three columns ▸ two rows of three equal columns */
+.l1 {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+/* LEVEL 2 · Breathing room ▸ three equal columns, 12px gaps */
+.l2 {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 12px;
+}
+
+/* LEVEL 3 · Sidebar ▸ 120px sidebar, main takes the rest, 12px gap */
+.l3 {
+   display: grid;
+   grid-template-columns: 120px 1fr;
+   gap: 12px;
+}
+
+/* LEVEL 4 · Scoreboard ▸ name column twice as wide as the others, 8px gaps */
+.l4 {
+   display: grid;
+   grid-template-columns: 2fr 1fr 1fr;
+   gap: 8px;
+}
+
+/* LEVEL 5 · Featured game ▸ three columns, 12px gaps, FEATURED spans two columns (TWO rules) */
+.l5 {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 12px;
+}
+
+.l5 .big {
+   grid-column: span 2;
+}
+
+/* LEVEL 6 · Tall card ▸ three columns, 12px gaps, TALL spans two rows (TWO rules) */
+.l6 {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 12px;
+}
+
+.l6 .tall {
+   grid-row: span 2;
+}
+
+/* LEVEL 7 · Game library ▸ as many 120px+ tiles per row as fit, 12px gaps (checked wide AND narrow) */
+.l7 {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+   gap: 12px;
+}
+
+/* LEVEL 8 · BOSS ▸ GameHub features: responsive cards, 16px gaps, full-width title (TWO rules) */
+.l8 {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+   gap: 16px;
+}
+
+.l8 .title {
+   grid-column: 1 / -1;
+}
+
+/* BONUS · The GameHub footer ▸ 2fr 1fr 1fr, 16px gaps, full-width bottom bar (TWO rules) */
+.l9 {
+   display: grid;
+   grid-template-columns: 2fr, 1fr, 1fr;
+   gap: 16px;
+}
+
+.l9 .bottom {
+   grid-column: span 3;
+}
