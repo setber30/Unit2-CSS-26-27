@@ -1,0 +1,195 @@
+/* ============================================================
+   Layout Rescue - style.css
+   PART A (given): colors, fonts, borders. Do not change it.
+   PART B (yours): the layout. Only flexbox and grid.
+   ============================================================ */
+
+/* ---------- PART A: given styles ---------- */
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   font-family: system-ui, Arial, sans-serif;
+   color: #1f2933;
+   background: #f5f7fa;
+}
+
+a {
+   color: inherit;
+   text-decoration: none;
+}
+
+section,
+footer {
+   padding: 48px 32px;
+}
+
+.nav {
+   background: #1f2933;
+   color: #fff;
+   padding: 16px 32px;
+}
+
+.logo {
+   font-weight: 700;
+   font-size: 1.4rem;
+}
+
+.links {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.links a {
+   padding: 8px 12px;
+   border-radius: 6px;
+}
+
+.links a:hover {
+   background: #3e4c59;
+}
+
+.hero {
+   background: #0b6e4f;
+   color: #fff;
+   text-align: center;
+   padding: 32px;
+   min-height: 420px;
+}
+
+.hero h1 {
+   font-size: 2.6rem;
+   margin: 0 0 12px;
+}
+
+.btn {
+   background: #fff;
+   color: #0b6e4f;
+   padding: 12px 28px;
+   border-radius: 8px;
+   font-weight: 700;
+   margin-top: 16px;
+}
+
+.card {
+   background: #fff;
+   border: 1px solid #d9e2ec;
+   border-radius: 12px;
+   padding: 24px;
+}
+
+.card h2 {
+   margin-top: 0;
+   color: #0b6e4f;
+}
+
+.photo {
+   background: #d9e2ec;
+   border-radius: 10px;
+   height: 140px;
+   padding: 16px;
+   font-weight: 700;
+}
+
+.tile {
+   background: #102a43;
+   color: #fff;
+   border-radius: 12px;
+   padding: 20px;
+   min-height: 120px;
+   font-weight: 700;
+}
+
+.tile.big {
+   background: #0b6e4f;
+   font-size: 1.6rem;
+}
+
+.footer {
+   background: #1f2933;
+   color: #fff;
+}
+
+.col h3 {
+   margin: 0 0 4px;
+}
+
+.col p {
+   margin: 0;
+   color: #bcccdc;
+}
+
+/* ---------- PART B: your layout ---------- */
+/* For each section: above your rule, write ONE comment line:
+   flex or grid, and why.  Example:  flex - one row of items.
+   Open targets.html to see the goal. The green checks at the
+   bottom of your page tell you when a section is right. */
+
+/* SECTION 1 - nav: logo on the left, links on the right,
+   both centered up and down. The 4 links sit in a row. */
+/* why: */
+.nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.links {
+   display: flex;
+   gap: 8px;
+}
+
+/* SECTION 2 - hero: title, line and button stacked in a
+   column, centered left-right AND up-down in the green box. */
+/* why: */
+.hero {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+/* SECTION 3 - features: 3 cards in one row, equal widths,
+   24px apart. */
+/* why: */
+.features {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 24px;
+}
+
+.card {}
+
+/* SECTION 4 - gallery: 3 columns, 2 rows, 16px gaps. */
+/* why: */
+.gallery {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 16px;
+}
+
+/* SECTION 5 - bento: 4 columns. The big tile is 2 columns
+   wide and 2 rows tall; the 4 small tiles fill the rest. */
+/* why: */
+.bento {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 16px;
+}
+
+.big {
+   grid-row: span 2;
+   grid-column: span 2;
+}
+
+/* SECTION 6 - footer: 3 columns, the first at the left edge,
+   the last at the right edge; they wrap when the window is narrow. */
+/* why: */
+.footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
